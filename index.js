@@ -10,7 +10,7 @@ app.set('view engine', '.hbs');
 
 //Home Page
 app.get('/', (req, res) => {//listening for a get request on the homepage, represented by /
-    res.render('home', {//replaces the res.send, does not seem to work, do not know why, works now bc layout is filled out
+    res.render('home', {//replaces the res.send
         //the message I want to display on the home page where I put the variable message
         message: "Welcome to Krista's BBQ!"
 
@@ -19,13 +19,13 @@ app.get('/', (req, res) => {//listening for a get request on the homepage, repre
 
 //About page
 app.get('/about', (req, res) => {//listening for a get request (visitor) on the about page
-    res.render('about', {//replaces the res.send, does not seem to work, do not know why, works now because layout is filled out
+    res.render('about', {//replaces the res.send
         //the message I want displayed on the about page where I put the variable message
         message: "Spicy jalapeno bacon ipsum dolor amet tail doner picanha leberkas turducken ribeye meatloaf burgdoggen fatback turkey shankle. Burgdoggen landjaeger pancetta, sausage fatback buffalo t-bone alcatra boudin bresaola flank leberkas pork belly. T-bone ground round kielbasa, drumstick beef ribs ham hock boudin picanha pork chop meatball tri-tip brisket. Jowl tri-tip pork chop strip steak, venison pork filet mignon chuck brisket bresaola."
     });
 });
 
-//Menu page, does not work
+//Menu page
 app.get('/menu-list', (req, res) => {//listening for a get request (visitor) on the menu page
     res.render('menu-list', {
         menu
