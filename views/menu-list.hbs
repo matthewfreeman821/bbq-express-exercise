@@ -1,4 +1,6 @@
-<h1>Here are you options:</h1>
+<h1>Here are your options:</h1>
 <ul>
-    {{!-- no clue what to do to get this to work --}}
+    {{#each menu.food}}
+    <li>{{name}} {{price}}</li>
+    {{/each}}
 </ul>

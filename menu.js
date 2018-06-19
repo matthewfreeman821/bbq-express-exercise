@@ -1,4 +1,4 @@
-{
+var menu = {
     "food": [
         {
             "name": "Pulled Pork",
@@ -13,4 +13,6 @@
             "price": "12.99"
         }
     ]
-}
+};
+
+module.exports = menu;

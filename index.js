@@ -3,11 +3,12 @@ const app = express();//allows me to use app.
 const menu = require('./menu');//where my data is
 const expressHbs = require('express-handlebars');//brings handlebars into the project
 
+
 //Did this because Chris said to, do not understand what it is
 app.engine('.hbs', expressHbs({defaultLayout: 'layout', extname: '.hbs'}));
 app.set('view engine', '.hbs');
 
-//Home Page, does not work
+//Home Page
 app.get('/', (req, res) => {//listening for a get request on the homepage, represented by /
     res.render('home', {//replaces the res.send, does not seem to work, do not know why, works now bc layout is filled out
         //the message I want to display on the home page where I put the variable message
@@ -16,7 +17,7 @@ app.get('/', (req, res) => {//listening for a get request on the homepage, repre
     });
 });
 
-//About page, does not work
+//About page
 app.get('/about', (req, res) => {//listening for a get request (visitor) on the about page
     res.render('about', {//replaces the res.send, does not seem to work, do not know why, works now because layout is filled out
         //the message I want displayed on the about page where I put the variable message
@@ -25,9 +26,9 @@ app.get('/about', (req, res) => {//listening for a get request (visitor) on the 
 });
 
 //Menu page, does not work
-app.get('/menu', (req, res) => {//listening for a get request (visitor) on the menu page
-    res.render('menu-list', {//replaces the res.send, does not seem to work, do not know why, works now because layout is filled out
-        menu//should pull the info from menu.json, does not, need to loop in menu-list
+app.get('/menu-list', (req, res) => {//listening for a get request (visitor) on the menu page
+    res.render('menu-list', {
+        menu
     });
 });
 
